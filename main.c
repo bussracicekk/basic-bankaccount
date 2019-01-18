@@ -13,7 +13,7 @@ void accountOperations(){
 
     char username[5];
     char usernamenew[5];
-    char usernames[10][10] = {"ali, veli, ayse, elif, busra"};
+    char usernames[10][10] = {"omur, selim, aysenur, elif, busra"};
     int passwords[10] = {1931, 1071, 8012, 1705, 1379};
     int password, password1;
     int option,option1;
