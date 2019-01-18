@@ -4,6 +4,8 @@
 int main()
 {
     accountOperations();
+
+    return 0;
 }
 
 //************you can make any operation about your bank account in this method**********************//
@@ -28,10 +30,12 @@ void accountOperations(){
         case 1:
             printf("Enter your username: ");
             scanf("%s",&username);
+
             for (int i=0; i < 6; i++) {
                 if (strcmp(username,usernames[i])){
                     printf("Enter your password: ");
                     scanf("%d",&password);
+
                     for(int j = 0; j < 6; j++){
                         if(passwords[j] == password){
                             printf("You logged in");
@@ -60,7 +64,7 @@ void accountOperations(){
                                     printf("\nCard was returned.\n");
                                     break;
 
-                                
+
                                 //****************default option is used for wrong choice**********************//
                                 default:
                                     printf("Request is not understood.\nPlease, choose an option\n");
@@ -70,7 +74,7 @@ void accountOperations(){
                         }
                     }
                 }
-                
+
                 //***********if usernames array does not have your username, here is works**************//
                 else{
                     printf("username is not correct");
@@ -107,12 +111,12 @@ void lodgement(int cash, int price){
      printf("Your Balance:  %d",cash);
      printf("\nPlease, Enter a price: ");
      scanf("%d",&price);
-     
+
      //********if you have not enough cash, here is works*********//
      if(price > cash){
          printf("\nCash is not enough\n");
      }
-     
+
      //********if you have enough cash, here is works************//
      else{
          cash -= price;
@@ -135,6 +139,7 @@ void transfer(int cash, int price){
     printf("\nYour Cash:  %d\n",cash);
     printf("Please, Enter a price for transfer: ");
     scanf("%d",&price);
+
     if(price > cash){
         printf("\nCash is not enough\n");
     }
